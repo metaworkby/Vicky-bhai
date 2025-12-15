@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trader Karol™️ - Telegram Channel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://i.supaimg.com/0c147f17-52a9-4fa6-b0d0-30be22ba4ba8.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 10px;
+            position: relative;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #ff6b6b;
+            border-right: 5px solid #4ecdc4;
+            border-bottom: 5px solid #45b7d1;
+            position: relative;
+            margin: 0 auto 15px;
+            animation: wave 2s ease-in-out infinite;
+            background: url('https://i.supaimg.com/0ce49b95-adcb-43fe-b60b-e6c318901645.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 107, 107, 0.5);
+            animation: pulse 2s infinite;
+        }
+        @keyframes wave {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .channel-name {
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #f8f9fa;
+        }
+        .join-btn {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1em;
+            display: inline-block;
+            transition: transform 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+            animation: pop 2s ease-in-out infinite;
+        }
+        @keyframes pop {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .join-btn:hover {
+            transform: scale(1.05);
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .stat-box {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            padding: 10px 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            min-width: 120px;
+            flex: 1;
+        }
+        .stat-box h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #4ecdc4;
+        }
+        .stat-box p {
+            margin: 5px 0 0;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .benefits {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .benefits h2 {
+            margin-bottom: 15px;
+            color: white;
+            font-size: 1.5em;
+        }
+        .benefit-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .benefit-box {
+            background: rgba(0, 0, 0, 0.7);
+            border-left: 5px solid #ff6b6b;
+            padding: 10px 15px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .benefit-box h4 {
+            margin: 0 0 5px;
+            font-weight: bold;
+            color: #4ecdc4;
+            font-size: 1.1em;
+        }
+        .benefit-box p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .disclaimer {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .disclaimer-box {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            padding: 15px;
+            max-width: 100%;
+            margin: 0 auto;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .disclaimer-box p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 0.8em;
+        }
+        /* Mobile-specific adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 5px;
+            }
+            .hero {
+                padding: 30px 5px;
+            }
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+            .channel-name {
+                font-size: 1.5em;
+            }
+            .tagline {
+                font-size: 1em;
+            }
+            .join-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            .stats {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            .stat-box {
+                width: 90%;
+                min-width: unset;
+            }
+            .benefit-grid {
+                gap: 15px;
+            }
+            .benefits h2 {
+                font-size: 1.3em;
+            }
+            .disclaimer-box {
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .channel-name {
+                font-size: 1.3em;
+            }
+            .tagline {
+                font-size: 0.9em;
+            }
+            .join-btn {
+                padding: 8px 15px;
+                font-size: 0.8em;
+            }
+            .stat-box h3 {
+                font-size: 1.3em;
+            }
+            .stat-box p {
+                font-size: 0.8em;
+            }
+            .benefit-box h4 {
+                font-size: 1em;
+            }
+            .benefit-box p {
+                font-size: 0.8em;
+            }
+            .disclaimer-box p {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+    <!-- Facebook Pixel Code for Meta Ad Tracking -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID'); // Replace with your actual Pixel ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="logo"></div>
+            <h1 class="channel-name">𝐒𝐭𝐨𝐜𝐤 𝐓𝐫𝐚𝐝𝐞𝐫 𝐊𝐚𝐫𝐨𝐥™️</h1>
+            <p class="tagline">Unlock the Secrets of Stock Trading: Expert Insights, Real-Time Tips, and Profitable Strategies Await!</p>
+            <a href="https://t.me/+HgiZ3Fhta4AzNjI1" class="join-btn" onclick="fbq('track', 'Lead')" data-fb-event="Lead">🔘 JOIN FREE TELEGRAM 🔘</a>
+        </section>
+
+        <section class="stats">
+            <div class="stat-box">
+                <h3>15,338</h3>
+                <p>Subscribers</p>
+            </div>
+            <div class="stat-box">
+                <h3>89%</h3>
+                <p>Accuracy</p>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Why Join Our Channel?</h2>
+            <div class="benefit-grid">
+                <div class="benefit-box">
+                    <h4>Expert Analysis</h4>
+                    <p>Get daily stock market analysis from seasoned traders.</p>
+                </div>
+                <div class="benefit-box">
+                    <h4>Real-Time Alerts</h4>
+                    <p>Receive instant buy/sell signals for maximum profits.</p>
+                </div>
+                <div class="benefit-box">
+                    <h4>Educational Content</h4>
+                    <p>Learn trading strategies and risk management tips.</p>
+                </div>
+                <div class="benefit-box">
+                    <h4>Community Support</h4>
+                    <p>Join a community of like-minded traders for discussions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="disclaimer">
+            <div class="disclaimer-box">
+                <p><strong>Disclaimer:</strong> Trading involves risk. Past performance is not indicative of future results. Always do your own research and consult a financial advisor before making investment decisions.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        Trader Karol Original, All Rights Reserved.
+    </footer>
+
+    <!-- Conversion Tracking Script (e.g., for button click) -->
+    <script>
+        document.querySelector('.join-btn').addEventListener('click', function() {
+            fbq('track', 'Lead'); // Track conversion on join button click
+        });
+    </script>
+</body>
+</html>
